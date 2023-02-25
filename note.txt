@@ -1,0 +1,17 @@
+express-async-handler
+Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
+add them to controller.
+
+Without express-async-handler
+
+express.get('/',(req, res, next) => {
+    foo.findAll()
+    .then ( bar => {
+       res.send(bar)
+     } )
+    .catch(next); // error passed on to the error handling route
+})
+
+1h.51
+
+refresh token
